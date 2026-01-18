@@ -1,0 +1,22 @@
+package br.projetopessoal.msemail.config;
+
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.info.Contact;
+import io.swagger.v3.oas.models.info.License;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class OpenApiConfig {
+
+    @Bean
+    public OpenAPI emailServiceOpenAPI() {
+        return new OpenAPI()
+                .info(new Info()
+                        .title("Microsserviço de envio de e-mail")
+                        .description("Microsserviço responsável pelo envio de e-mails via SMTP")
+                        .version("v1")
+                );
+    }
+}
